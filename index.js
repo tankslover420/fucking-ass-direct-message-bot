@@ -20,7 +20,7 @@ client.on("interactionCreate", async interaction => {
         PermissionsBitField.Flags.Administrator
     )) {
         return interaction.reply({
-            content: "❌ Admin only command.",
+            content: "this shit only for admin",
             ephemeral: true
         });
     }
@@ -29,7 +29,7 @@ client.on("interactionCreate", async interaction => {
     const message = interaction.options.getString("message");
 
     await interaction.reply({
-        content: "📨 Sending DMs...",
+        content: "sending dms",
         ephemeral: true
     });
 
