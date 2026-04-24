@@ -3,10 +3,10 @@ require("dotenv").config();
 
 const command = new SlashCommandBuilder()
     .setName("dmrole")
-    .setDescription("DM everyone with a specific role")
+    .setDescription("dm everyone with a role")
     .addRoleOption(option =>
         option.setName("role")
-            .setDescription("Role to DM")
+            .setDescription("role to dm")
             .setRequired(true)
     )
     .addStringOption(option =>
@@ -25,5 +25,5 @@ const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
         ),
         { body: [command.toJSON()] }
     );
-    console.log("✅ Slash command registered");
+    console.log("slash command registered");
 })();
